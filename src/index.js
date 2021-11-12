@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom";
 import { Home } from "./Pages/Home";
 import Navbar from "./Components/NavBar";
-import { BrowserRouter } from "react-router-dom";
+import {BrowserRouter, Route, Link, Switch} from "react-router-dom";
 
 
 
@@ -28,11 +28,15 @@ const theme = createTheme({
 const Index = () => {
   return (
     <BrowserRouter>
-    <ThemeProvider theme={theme}>
-     <Navbar />
-      <Home />
-      <CssBaseline />
-    </ThemeProvider>
+      <Navbar />
+      <div className="container-fluid">
+        <Switch>
+          <ThemeProvider theme={theme}>
+            <Home />
+            <CssBaseline />
+          </ThemeProvider>
+        </Switch>
+      </div>
     </BrowserRouter>
   );
 };

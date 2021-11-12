@@ -3,9 +3,7 @@ import {
   Nav,
   NavLink,
   Bars,
-  NavMenu,
-  NavBtn,
-  NavBtnLink
+  NavMenu
 } from './Navbar';
 import logo from '../../Assets/images/Logo.jpg'
 

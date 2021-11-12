@@ -1,9 +1,15 @@
 import ReactDOM from "react-dom";
+import { Home } from "./Pages/Home";
+
+
+import { CssBaseline } from "@material-ui/core";
+
 
 const Index = () => {
   return (
     <div>
-      <h1>Hello World</h1>
+      <Home />
+      <CssBaseline />
     </div>
   );
 };

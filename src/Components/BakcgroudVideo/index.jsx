@@ -1,3 +1,2 @@
 import BackgroudVideo from "./BackgroudVideo";
-
-export default BackgroudVideo
+export default BackgroudVideo;

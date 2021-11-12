@@ -11,6 +11,11 @@ const theme = createTheme({
       styleOverrides: `
         h1 {
           margin: 0;
+          color: #fff;
+          font-size: 2.5rem;
+          font-weight: bold;
+          text-align: center;
+          
         }
       `,
     },

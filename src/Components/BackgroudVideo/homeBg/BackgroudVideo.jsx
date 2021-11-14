@@ -1,5 +1,5 @@
 import React from "react";
-import video from "../../Assets/images/bg.mp4"
+import video from '../../../Assets/images/bg.mp4'
 
 const BackgroudVideo = () => {
     return (

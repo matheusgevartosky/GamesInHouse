@@ -1,7 +1,8 @@
 import { Box } from '@material-ui/system';
 import react from 'react';
-import BackgroudVideo from '../Components/BakcgroudVideo/index';
+import BackgroudVideo from '../Components/BackgroudVideo/homeBg/index'
 import { Container } from '@material-ui/core';
+import HomeButton from '../Components/HomeButton/button';
 
 
 
@@ -44,12 +45,7 @@ export const Home = () => {
           </div>
       
         <div>
-          <button style={{ marginTop: '10px' }}>
-            Click here to get started!
-          </button>
-          <button style={{ marginTop: '10px' }}>
-            Click Here to see the lestest games news!
-            </button>
+          <HomeButton />
         </div>
 
       </Container>

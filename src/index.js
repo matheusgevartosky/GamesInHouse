@@ -1,5 +1,9 @@
 import ReactDOM from "react-dom";
 import { Home } from "./Pages/Home";
+import GameList from "./Pages/GameList";
+import GameNews from "./Pages/GameNews";
+import GameDetails from "./Pages/GameDetails";
+
 import Navbar from "./Components/NavBar";
 import {BrowserRouter, Route, Link, Switch} from "react-router-dom";
 
@@ -28,15 +32,16 @@ const theme = createTheme({
 const Index = () => {
   return (
     <BrowserRouter>
+      <ThemeProvider theme={theme}>
       <Navbar />
-      <div className="container-fluid">
+      <CssBaseline />
         <Switch>
-          <ThemeProvider theme={theme}>
-            <Home />
-            <CssBaseline />
-          </ThemeProvider>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/games" component={GameList} />
+          <Route exact path="/news" component={GameNews} />
+          <Route exact path="/details" component={GameDetails} />
         </Switch>
-      </div>
+      </ThemeProvider>
     </BrowserRouter>
   );
 };

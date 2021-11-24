@@ -1,19 +1,19 @@
+import { Container } from "@mui/material";
 import React from "react";
 import Background from '../Components/BackgroudVideo/GamesListBg/index'
+import GameCard from '../Components/GameCard/GameCard'
 
 export default function GameList(props) {
-    const { games } = props;
-    return (
-        <div>
-            <Background />
+  const { games } = props;
+  return (
+    <>
+      <Background />
+      <box marginTop={2}>
         <h1>Games</h1>
-        {/* <ul>
-            {games.map(game => (
-            <li key={game.id}>
-                <a href={`/games/${game.id}`}>{game.name}</a>
-            </li>
-            ))}
-        </ul> */}
-        </div>
-    );
-    }
+        <Container>
+          <GameCard />
+        </Container>
+      </box>
+    </>
+  );
+}

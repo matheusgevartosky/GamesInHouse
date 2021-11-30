@@ -5,12 +5,10 @@ import GameNews from "./Pages/GameNews";
 import GameDetails from "./Pages/GameDetails";
 
 import Navbar from "./Components/NavBar";
-import {BrowserRouter, Route, Link, Switch} from "react-router-dom";
-
-
-
+import {BrowserRouter, Route,Routes, Link, Switch} from "react-router-dom";
+import { ThemeProvider } from "@material-ui/core/styles";
 import { CssBaseline,  createTheme } from "@material-ui/core";
-import { ThemeProvider } from "@emotion/react";
+
 
 const theme = createTheme({
   components: {
@@ -22,6 +20,7 @@ const theme = createTheme({
           font-size: 2.5rem;
           font-weight: bold;
           text-align: center;
+          
         }
       `,
     },
@@ -31,18 +30,19 @@ const theme = createTheme({
 
 const Index = () => {
   return (
-    <BrowserRouter>
-      <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
       <Navbar />
       <CssBaseline />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/games" component={GameList} />
-          <Route exact path="/news" component={GameNews} />
-          <Route exact path="/details" component={GameDetails} />
-        </Switch>
+        <Routes>
+          <Route  path="/" element={< Home />} />
+          <Route  path="/games" element={< GameList />} />
+          <Route  path="/news" element={< GameNews />} />
+          <Route  path="/details" element={< GameDetails />} />
+        </Routes>
+        </BrowserRouter>
       </ThemeProvider>
-    </BrowserRouter>
+    
   );
 };
 ReactDOM.render(<Index />, document.getElementById("root"));

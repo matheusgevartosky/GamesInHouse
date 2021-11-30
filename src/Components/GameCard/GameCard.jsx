@@ -5,28 +5,25 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { CardHeader } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
-export default function GameCard() {
+export const GameCard = ({ title, description, thumb }) => {
+  const navigate = useNavigate();
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        height="140"
-        image="/static/images/cards/contemplative-reptile.jpg"
-      />
+    <Card sx={{ maxWidth: 345, color:"dark"}}>
+        <CardMedia component="img" height="194" image={thumb} alt={title}  />
+        
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          { title }
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          { description }
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">See More!</Button>
-
+        <Button size="small" onClick={() => navigate(`/games`)} >See More!</Button>
       </CardActions>
     </Card>
   );

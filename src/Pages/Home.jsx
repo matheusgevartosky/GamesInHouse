@@ -5,12 +5,21 @@ import { Container } from '@material-ui/core';
 import HomeButton from '../Components/HomeButton/button';
 
 
-
-
 export const Home = () => {
   return (
     <>
-      <BackgroudVideo />
+      <BackgroudVideo
+        style={{
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          zIndex: '-1',
+          left: '50%',
+          top: '50%',
+          objectFit: 'cover',
+          transform: 'translate(-50%, -50%)',
+        }}
+      />
       <Container
         style={{
           display: 'flex',
@@ -20,8 +29,9 @@ export const Home = () => {
           backgroundColor: '#ffffff10',
           backdropFilter: 'blur(15px)',
           borderRadius: '10px',
-          width: '50%',
+          width: '45%',
           marginTop: '10%',
+          minHeight: '50vh',
         }}
       >
         <h1>Welcome to GameInHouse!</h1>
